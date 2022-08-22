@@ -1,12 +1,13 @@
 document.getElementById('messi-btn').addEventListener('click', function(){
+
+    // validation check start
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-       
         if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
 
     const messiId = document.getElementById('messi-field');
     const messiString = messiId.innerText;
@@ -19,14 +20,13 @@ document.getElementById('messi-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('messi-btn').disabled = 'true';
 
-    //console.log(messiString);
-
     // Calculation starts
 
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
@@ -35,24 +35,20 @@ document.getElementById('messi-btn').addEventListener('click', function(){
     // coach and manger expenses
 
     document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
 
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
+        const managerValue = getValueFromInputField('manager-field');
+        const coachValue = getValueFromInputField('coach-field');
 
         const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
+        
+        const expenses = getTextFromElementField('player-expenses-field');
         totalExpensesId.innerText = expenses + coachValue + managerValue ;
     })
     // Calculation ends
     
 })
+
+
 document.getElementById('neymar-btn').addEventListener('click', function(){
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
