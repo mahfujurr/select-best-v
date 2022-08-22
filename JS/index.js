@@ -22,6 +22,7 @@ document.getElementById('messi-btn').addEventListener('click', function(){
     //console.log(messiString);
 
     // Calculation starts
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
         const perPlayerId = document.getElementById('per-player-field');
         const perPlayerString = perPlayerId.value ;
@@ -29,6 +30,25 @@ document.getElementById('messi-btn').addEventListener('click', function(){
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
+    })
+
+    // coach and manger expenses
+
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
     })
     // Calculation ends
     
@@ -65,6 +85,25 @@ document.getElementById('neymar-btn').addEventListener('click', function(){
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
+
+    // coach and manger expenses
+    
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
+    })
     // Calculation ends
     
 })
@@ -99,6 +138,25 @@ document.getElementById('kylian-btn').addEventListener('click', function(){
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
+    })
+
+    // coach and manger expenses
+    
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
     })
     // Calculation ends
     
@@ -135,6 +193,25 @@ document.getElementById('vitor-btn').addEventListener('click', function(){
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
+
+    // coach and manger expenses
+    
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
+    })
     // Calculation endss
     
 })
@@ -170,6 +247,25 @@ document.getElementById('ramos-btn').addEventListener('click', function(){
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
+
+    // coach and manger expenses
+    
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
+    })
     // Calculation ends
     
 })
@@ -204,6 +300,25 @@ document.getElementById('renato-btn').addEventListener('click', function(){
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
+    })
+
+    // coach and manger expenses
+    
+    document.getElementById('total-calculate-btn').addEventListener('click', function(){
+        const managerId = document.getElementById('manager-field');
+        const managerString = managerId.value ;
+        const managerValue = parseFloat(managerString);
+
+        const coachId = document.getElementById('coach-field');
+        const coachString = coachId.value ;
+        const coachValue = parseFloat(coachString);
+
+        const totalExpensesId = document.getElementById('total-expenses');
+        // const totalExpensesInnerText = totalExpensesId.innerText ;
+        const expensesId = document.getElementById('player-expenses-field');
+        const expensesstring = expensesId.innerText ;
+        const expenses = parseFloat(expensesstring);
+        totalExpensesId.innerText = expenses + coachValue + managerValue ;
     })
     // Calculation ends
     
