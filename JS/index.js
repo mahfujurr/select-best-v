@@ -1,3 +1,5 @@
+// player-1
+
 document.getElementById('messi-btn').addEventListener('click', function(){
 
     // validation check start
@@ -8,9 +10,11 @@ document.getElementById('messi-btn').addEventListener('click', function(){
             return;
         }
     // validation check end
+    
+    // clicked button enable and disable codes start
 
-    const messiId = document.getElementById('messi-field');
-    const messiString = messiId.innerText;
+    const messiString = getInnerTextOnly('messi-field');
+
     const messiBtnDiv = document.getElementById('messi-btn-div');
     messiBtnDiv.innerHTML = '<button id="messi-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -20,7 +24,9 @@ document.getElementById('messi-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('messi-btn').disabled = 'true';
 
-    // Calculation starts
+    // clicked button enable and disable codes end
+
+    // player expenses
 
     document.getElementById('calculate-btn').addEventListener('click', function(){
         
@@ -31,36 +37,25 @@ document.getElementById('messi-btn').addEventListener('click', function(){
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
-
-    // coach and manger expenses
-
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-
-        const managerValue = getValueFromInputField('manager-field');
-        const coachValue = getValueFromInputField('coach-field');
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        
-        const expenses = getTextFromElementField('player-expenses-field');
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation ends
-    
 })
 
+// player-2
 
 document.getElementById('neymar-btn').addEventListener('click', function(){
+
+    // validation check start
+
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-        //const perPlayerId = document.getElementById('per-player-field');
         if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
+    
+    // clicked button enable and disable codes start
+    const neymarString = getInnerTextOnly('neymar-field');
 
-    const neymarId = document.getElementById('neymar-field');
-    const neymarString = neymarId.innerText;
     const neymarBtnDiv = document.getElementById('neymar-btn-div');
     neymarBtnDiv.innerHTML = '<button id="neymar-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -70,51 +65,38 @@ document.getElementById('neymar-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('neymar-btn').disabled = 'true';
 
-    //console.log(messiString);
+    // clicked button enable and disable codes end
 
-    // Calculation starts
+    // player expenses
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
-
-    // coach and manger expenses
-    
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
-
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation ends
-    
 })
+
+// player-3
+
 document.getElementById('kylian-btn').addEventListener('click', function(){
+
+    // validation check start
+
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-        //const perPlayerId = document.getElementById('per-player-field');
         if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
+    
+    // clicked button enable and disable codes start
+    const kylianString = getInnerTextOnly('kylian-field');
 
-    const kylianId = document.getElementById('kylian-field');
-    const kylianString = kylianId.innerText;
     const kylianBtnDiv = document.getElementById('kylian-btn-div');
     kylianBtnDiv.innerHTML = '<button id="kylian-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -124,51 +106,38 @@ document.getElementById('kylian-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('kylian-btn').disabled = 'true';
 
-    //console.log(messiString);
+    // clicked button enable and disable codes end
 
-    // Calculation starts
+    // player expenses
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
-    })
-
-    // coach and manger expenses
-    
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
-
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation ends
-    
+    })  
 })
+
+// player-4
+
 document.getElementById('vitor-btn').addEventListener('click', function(){
+
+    // validation check start
+
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-        //const perPlayerId = document.getElementById('per-player-field');
         if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
+    
+    // clicked button enable and disable codes start
+    const vitorString = getInnerTextOnly('vitor-field');
 
-    const vitorId = document.getElementById('vitor-field');
-    const vitorString = vitorId.innerText;
     const vitorBtnDiv = document.getElementById('vitor-btn-div');
     vitorBtnDiv.innerHTML = '<button id="vitor-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -178,51 +147,38 @@ document.getElementById('vitor-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('vitor-btn').disabled = 'true';
 
-    //console.log(messiString);
+    // clicked button enable and disable codes end
 
-    // Calculation starts
+    // player expenses
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
-    })
-
-    // coach and manger expenses
-    
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
-
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation endss
-    
+    }) 
 })
+
+// player-5
+
 document.getElementById('ramos-btn').addEventListener('click', function(){
+
+    // validation check start
+
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-        //const perPlayerId = document.getElementById('per-player-field');
         if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
+    
+    // clicked button enable and disable codes start
+    const ramosString = getInnerTextOnly('ramos-field');
 
-    const ramosId = document.getElementById('ramos-field');
-    const ramosString = ramosId.innerText;
     const ramosBtnDiv = document.getElementById('ramos-btn-div');
     ramosBtnDiv.innerHTML = '<button id="ramos-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -232,51 +188,38 @@ document.getElementById('ramos-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('ramos-btn').disabled = 'true';
 
-    //console.log(messiString);
+    // clicked button enable and disable codes end
 
-    // Calculation starts
+    // player expenses
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
     })
-
-    // coach and manger expenses
-    
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
-
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation ends
-    
 })
+
+// player-6
+
 document.getElementById('renato-btn').addEventListener('click', function(){
+
+    // validation check start
+    
     const nodeList = document.getElementById('ol-field');
         let number = nodeList.childNodes ;
-        // console.log(number);
-        //const perPlayerId = document.getElementById('per-player-field');
-        if ((number.length) >= 5){
+        if ((number.length ) >= 5){
             alert("Can't select more than 5 player");
             return;
         }
+    // validation check end
+    
+    // clicked button enable and disable codes start
+    const renatoString = getInnerTextOnly('renato-field');
 
-    const renatoId = document.getElementById('renato-field');
-    const renatoString = renatoId.innerText;
     const renatoBtnDiv = document.getElementById('renato-btn-div');
     renatoBtnDiv.innerHTML = '<button id="renato-btn" class="rounded-lg bg-slate-300	 my-3 py-1 font-bold w-4/5 ">SELECT</button>'
 
@@ -286,36 +229,18 @@ document.getElementById('renato-btn').addEventListener('click', function(){
     olId.appendChild(li1);
     document.getElementById('renato-btn').disabled = 'true';
 
-    //console.log(messiString);
+    // clicked button enable and disable codes end
 
-    // Calculation starts
+    // player expenses
+
     document.getElementById('calculate-btn').addEventListener('click', function(){
-        const perPlayerId = document.getElementById('per-player-field');
-        const perPlayerString = perPlayerId.value ;
-        const selectedPlayerExpenses = parseFloat(perPlayerString) * parseFloat(number.length) ;
+        
+        const perPlayerValue = getValueFromInputField('per-player-field');
+
+        const selectedPlayerExpenses = perPlayerValue * parseFloat(number.length) ;
 
         const expensesId = document.getElementById('player-expenses-field');
         expensesId.innerText = selectedPlayerExpenses;
-    })
-
-    // coach and manger expenses
-    
-    document.getElementById('total-calculate-btn').addEventListener('click', function(){
-        const managerId = document.getElementById('manager-field');
-        const managerString = managerId.value ;
-        const managerValue = parseFloat(managerString);
-
-        const coachId = document.getElementById('coach-field');
-        const coachString = coachId.value ;
-        const coachValue = parseFloat(coachString);
-
-        const totalExpensesId = document.getElementById('total-expenses');
-        // const totalExpensesInnerText = totalExpensesId.innerText ;
-        const expensesId = document.getElementById('player-expenses-field');
-        const expensesstring = expensesId.innerText ;
-        const expenses = parseFloat(expensesstring);
-        totalExpensesId.innerText = expenses + coachValue + managerValue ;
-    })
-    // Calculation ends
-    
+    }) 
 })
+
